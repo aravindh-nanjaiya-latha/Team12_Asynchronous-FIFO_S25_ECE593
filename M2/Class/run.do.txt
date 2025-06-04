@@ -1,0 +1,41 @@
+# Step 1: Create a working library
+vlib work
+vmap work work
+
+# Step 2: Compile the SystemVerilog design files
+vlog -work work flip_flop_synchronizer.sv
+vlog -work work write_pointer_handler.sv
+vlog -work work fifo_memory.sv
+vlog -work work Top_module.sv
+vlog -work work read_pointer_handler.sv
+
+# Step 3: Compile the testbench
+vlog -work work test_bench.sv
+
+# Step 4: Launch the simulation with the testbench as the top module
+vsim -voptargs=+acc work.test_bench
+
+
+# Step 5: Add selected signals to the waveform viewer
+add wave -position insertpoint sim:/test_bench/wclk 
+add wave -position insertpoint sim:/test_bench/rclk
+add wave -position insertpoint sim:/test_bench/wrst_n
+add wave -position insertpoint sim:/test_bench/rrst_n
+add wave -position insertpoint sim:/test_bench/w_en
+add wave -position insertpoint sim:/test_bench/r_en
+add wave -position insertpoint sim:/test_bench/data_in
+add wave -position insertpoint sim:/test_bench/data_out
+add wave -position insertpoint sim:/test_bench/full
+add wave -position insertpoint sim:/test_bench/empty 
+add wave -position insertpoint sim:/test_bench/dut/b_wptr
+add wave -position insertpoint sim:/test_bench/dut/g_wptr
+add wave -position insertpoint sim:/test_bench/dut/g_wptr_sync
+add wave -position insertpoint sim:/test_bench/dut/b_rptr
+add wave -position insertpoint sim:/test_bench/dut/g_rptr
+add wave -position insertpoint sim:/test_bench/dut/g_rptr_sync 
+
+
+# Step 6: Run the simulation
+run -all
+
+            
