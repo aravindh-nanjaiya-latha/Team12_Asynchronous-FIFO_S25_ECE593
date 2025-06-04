@@ -1,0 +1,95 @@
+do run.do.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vmap 2021.3_1 Lib Mapping Utility 2021.08 Aug 15 2021
+# vmap work work 
+# Modifying /home/rgunda/common/Desktop/Rishi_project/ECE_593_project.mpf
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 23:43:56 on Apr 20,2025
+# vlog -reportprogress 300 -work work flip_flop_synchronizer.sv 
+# -- Compiling module flip_flop_synchronizer
+# 
+# Top level modules:
+# 	flip_flop_synchronizer
+# End time: 23:43:56 on Apr 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 23:43:56 on Apr 20,2025
+# vlog -reportprogress 300 -work work write_pointer_handler.sv 
+# -- Compiling module write_pointer_handler
+# 
+# Top level modules:
+# 	write_pointer_handler
+# End time: 23:43:56 on Apr 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 23:43:56 on Apr 20,2025
+# vlog -reportprogress 300 -work work fifo_memory.sv 
+# -- Compiling module fifo_memory
+# 
+# Top level modules:
+# 	fifo_memory
+# End time: 23:43:56 on Apr 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 23:43:56 on Apr 20,2025
+# vlog -reportprogress 300 -work work Top_module.sv 
+# -- Compiling module asynchronous_fifo
+# 
+# Top level modules:
+# 	asynchronous_fifo
+# End time: 23:43:57 on Apr 20,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 23:43:57 on Apr 20,2025
+# vlog -reportprogress 300 -work work read_pointer_handler.sv 
+# -- Compiling module read_pointer_handler
+# 
+# Top level modules:
+# 	read_pointer_handler
+# End time: 23:43:57 on Apr 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 23:43:57 on Apr 20,2025
+# vlog -reportprogress 300 -work work test_bench.sv 
+# -- Compiling module test_bench
+# 
+# Top level modules:
+# 	test_bench
+# End time: 23:43:57 on Apr 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:43:58 on Apr 20,2025, Elapsed time: 0:03:22
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.test_bench 
+# Start time: 23:43:58 on Apr 20,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.test_bench(fast)
+# Loading work.asynchronous_fifo(fast)
+# Loading work.flip_flop_synchronizer(fast)
+# Loading work.write_pointer_handler(fast)
+# Loading work.read_pointer_handler(fast)
+# Loading work.fifo_memory(fast)
+# ********* Basic FIFO Functional Test  ***********
+#  Writing: 72 (Queue size: 1)
+#  Writing: b2 (Queue size: 2)
+#  Writing: 10 (Queue size: 3)
+#  Writing: 30 (Queue size: 4)
+#  Writing: b5 (Queue size: 5)
+#  Writing: b6 (Queue size: 6)
+#  Writing: 14 (Queue size: 7)
+#  Writing: df (Queue size: 8)
+#  FIFO FULL after writing 8 elements
+#  Read: 72 (Match)
+#  Read: b2 (Match)
+#  Read: 10 (Match)
+#  Read: 30 (Match)
+#  Read: b5 (Match)
+#  Read: b6 (Match)
+#  Read: 14 (Match)
+#  Read: df (Match)
+#  FIFO EMPTY after reading 8 elements
+#  Test Passed: FIFO Full & Empty behavior verified.
+# ** Note: $stop    : test_bench.sv(105)
+#    Time: 827 ns  Iteration: 0  Instance: /test_bench
+# Break in Module test_bench at test_bench.sv line 105
